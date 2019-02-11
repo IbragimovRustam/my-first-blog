@@ -6,7 +6,7 @@
             <div class="date">
                 {{ post.published_date }}
             </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1> # pk - primary key (индекс с ДБ, создается автоматически)
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1> {% comment %} pk - primary key (индекс с ДБ, создается автоматически) {% endcomment %}
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
