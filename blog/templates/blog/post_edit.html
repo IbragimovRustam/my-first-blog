@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %} {% comment %} мы должны добавить {% csrf_token %}. Это очень важно, поскольку так мы делаем форму защищённой! {% endcomment %}
+        {{ form.as_p }} {% comment %} для отображения формы {% endcomment %}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
